@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:paddingTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/detail_image"
+        android:src="@drawable/cover"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:id="@+id/detail_title"
+        android:layout_below="@id/detail_image"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/detail_summary_scroll"
+        android:layout_below="@+id/detail_title">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/detail_summary"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here is the summary" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating:"
+
+        android:paddingLeft="10dp"
+        android:id="@+id/detail_rating"
+        android:layout_below="@+id/detail_summary_scroll"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/detail_genres"
+        android:textColor="@color/black"
+        android:text="horror"
+
+        android:paddingLeft="10dp"
+        android:layout_below="@id/detail_rating"/>
+
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_below="@id/detail_genres"
+       android:layout_centerInParent="true"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/downloadLilnearLayout"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:textColor="#FF0000"
+        android:layout_below="@id/downloadLilnearLayout"
+        android:layout_height="wrap_content"
+        android:text="These buttons will copy the magnetic url to your clipboard"/>
+</RelativeLayout>

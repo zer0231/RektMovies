@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/search_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/teal_200"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/genre_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/genreSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/genre_textView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/quality_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/genre_textView"
+        android:text="Quality" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/qualitySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/genreSpinner"
+        android:layout_toRightOf="@id/quality_textView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/rating_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quality_textView"
+        android:text="Rating" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/ratingSpinner"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/qualitySpinner"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rating_textView" />
+
+</RelativeLayout>
